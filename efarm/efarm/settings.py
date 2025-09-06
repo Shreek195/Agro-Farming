@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
+from env import *
 
 SHOW_NAV_APP_ICON=True
 
@@ -29,8 +30,8 @@ MESSAGE_TAGS = {
 
 
 # Paytm settings
-PAYTM_MERCHANT_ID = 'lNOMMu02473588200736'
-PAYTM_SECRET_KEY = 'kfzGeqYp6CQ0xrt_'
+PAYTM_MERCHANT_ID = PAYTM_MERCHANT_ID
+PAYTM_SECRET_KEY = PAYTM_SECRET_KEY
 PAYTM_WEBSITE = 'WEBSTAGING'
 PAYTM_CHANNEL_ID = 'WEB'
 PAYTM_INDUSTRY_TYPE_ID = 'Retail'
@@ -232,8 +233,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'efarm.help.sys@gmail.com'
-EMAIL_HOST_PASSWORD = 'vdgn sfvg homs zspy' #'help efarm'
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
